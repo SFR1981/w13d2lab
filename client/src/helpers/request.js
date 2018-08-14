@@ -8,7 +8,9 @@ Request.prototype.get = function () {
 };
 
 Request.prototype.post = function (payload) {
+  console.log(payload);
   return fetch(this.url, {
+
     method: 'POST',
     body: JSON.stringify(payload),
     headers: { 'Content-Type': 'application/json' }
